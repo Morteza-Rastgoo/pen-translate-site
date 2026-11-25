@@ -1,35 +1,172 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pen Translate</title>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Point Translate — Translate Any Text on Your Android Screen</title>
+<meta name="description" content="Point at any text on your Android screen — with a finger or an S Pen — and read it in your language. On-device, offline, 60+ languages, and no data collected. Get Point Translate on Google Play.">
+<link rel="canonical" href="https://morteza-rastgoo.github.io/pen-translate-site/">
+<meta name="theme-color" content="#4F46E5">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Point Translate">
+<meta property="og:title" content="Point Translate — Translate Any Text on Your Android Screen">
+<meta property="og:description" content="Point at any text on your Android screen — with a finger or an S Pen — and read it in your language. On-device, offline, no data collected.">
+<meta property="og:url" content="https://morteza-rastgoo.github.io/pen-translate-site/">
+<meta property="og:image" content="https://play-lh.googleusercontent.com/B8KB32SS6dT5nuSV0Ognyh-LCYE1aJDR_yyAVvF-F62pKN0hTFKPR7G-LiBSRd8gwfTePPWx1HFnAnvREOI7=w1200">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Point Translate — Translate Any Text on Your Android Screen">
+<meta name="twitter:description" content="Point at any text on your Android screen — with a finger or an S Pen — and read it in your language. On-device, offline, no data collected.">
+<meta name="twitter:image" content="https://play-lh.googleusercontent.com/B8KB32SS6dT5nuSV0Ognyh-LCYE1aJDR_yyAVvF-F62pKN0hTFKPR7G-LiBSRd8gwfTePPWx1HFnAnvREOI7=w1200">
+
+<!-- Structured data: this is what makes Google / AI overviews show the app with a Play link -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Point Translate: Tap or Pen",
+  "alternateName": "Point Translate",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Android",
+  "description": "Point at any text on your Android screen — with a finger or an S Pen — and read it in your language. On-device, offline, 60+ languages, no data collected.",
+  "url": "https://morteza-rastgoo.github.io/pen-translate-site/",
+  "image": "https://play-lh.googleusercontent.com/B8KB32SS6dT5nuSV0Ognyh-LCYE1aJDR_yyAVvF-F62pKN0hTFKPR7G-LiBSRd8gwfTePPWx1HFnAnvREOI7=w1200",
+  "softwareVersion": "1.3.3",
+  "minimumRequirements": "Android 11 or newer",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "installUrl": "https://play.google.com/store/apps/details?id=com.hellodelorus.pentranslate",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.hellodelorus.pentranslate",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hello Delorus",
+    "url": "https://morteza-rastgoo.github.io/pen-translate-site/"
+  },
+  "featureList": [
+    "Translate on-screen text with a finger or S Pen",
+    "On-device, offline translation",
+    "60+ languages, both directions",
+    "No data collected",
+    "Works in any app: browsers, chat, PDFs, games"
+  ]
+}
+</script>
+
 <style>
- :root{color-scheme:light dark}
- body{font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-      max-width:44rem;margin:0 auto;padding:3rem 1.25rem 5rem}
- h1{font-size:2rem;margin:0 0 .25rem} .sub{opacity:.7;margin:0 0 2.5rem}
- .badge{display:inline-block;padding:.2rem .6rem;border-radius:999px;
-        background:#4F46E5;color:#fff;font-size:.78rem;vertical-align:middle}
- a{color:#6D5BF0} ul{padding-left:1.2rem}
-</style></head><body>
-<h1>Pen Translate</h1>
-<p class="sub">Hover your S Pen over any text. Read it in your language. No taps.</p>
+ :root{color-scheme:light dark;--accent:#4F46E5;--accent2:#6D5BF0}
+ *{box-sizing:border-box}
+ body{font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      max-width:60rem;margin:0 auto;padding:2rem 1.25rem 4rem;color:#1a1a2e;background:#fff}
+ @media (prefers-color-scheme:dark){body{color:#e8e8f0;background:#0e0e16}
+   .card,.shot{background:#16161f;border-color:#26263a}}
+ h1{font-size:2.4rem;line-height:1.15;margin:0 0 .5rem}
+ h2{font-size:1.4rem;margin:2.6rem 0 .6rem}
+ .sub{font-size:1.15rem;opacity:.85;margin:0 0 1.5rem;max-width:46rem}
+ .badge{display:inline-block;padding:.25rem .7rem;border-radius:999px;background:var(--accent);
+        color:#fff;font-size:.8rem;font-weight:600;vertical-align:middle;margin-bottom:1rem}
+ a{color:var(--accent2)}
+ .cta{display:inline-block;background:var(--accent);color:#fff !important;text-decoration:none;
+      padding:.85rem 1.4rem;border-radius:12px;font-weight:600;font-size:1.05rem;margin:.4rem .5rem .4rem 0}
+ .cta.ghost{background:transparent;border:1.5px solid var(--accent);color:var(--accent2) !important}
+ .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1.5rem 0}
+ .card{border:1px solid #e6e6f0;border-radius:14px;padding:1.1rem 1.2rem}
+ .card h3{margin:0 0 .35rem;font-size:1.05rem}
+ .card p{margin:0;opacity:.8;font-size:.95rem}
+ .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.75rem;margin:1.5rem 0}
+ .shot{border-radius:14px;overflow:hidden;border:1px solid #e6e6f0;aspect-ratio:9/19.5;background:#f2f2f8}
+ .shot img{width:100%;height:100%;object-fit:cover;display:block}
+ .hero{display:flex;flex-wrap:wrap;gap:2rem;align-items:center}
+ .hero .copy{flex:1 1 22rem}
+ .hero .phone{flex:0 0 15rem;max-width:15rem}
+ .hero .phone img{width:100%;border-radius:22px;border:1px solid #e6e6f0;box-shadow:0 20px 50px -20px rgba(79,70,229,.5)}
+ footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e6e6f0;opacity:.7;font-size:.9rem}
+ ul{padding-left:1.2rem} li{margin:.3rem 0}
+ .kicker{color:var(--accent2);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:.8rem}
+</style>
+</head>
+<body>
 
-<p>Pen Translate is an Android app for stylus tablets and phones. Hold the pen a few
-millimetres above a word and a translation appears next to it. Nothing is tapped,
-nothing is selected, nothing is copied.</p>
+<div class="hero">
+  <div class="copy">
+    <span class="badge">On-device · Offline · No data collected</span>
+    <h1>Point at any text on your screen. Read it in your language.</h1>
+    <p class="sub">Point Translate is an Android app. Drag a small sight over any word,
+    sentence, or paragraph — in any app — and let go. The translation appears in a
+    floating bubble, right where you are looking. No tapping into a menu, no copying,
+    no switching apps, no screenshots. With an S Pen you can just hover and hold still.</p>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.hellodelorus.pentranslate">Get it on Google Play</a>
+    <a class="cta ghost" href="#how">How it works</a>
+    <p style="margin-top:.8rem;opacity:.7;font-size:.9rem">Free · 10 translations a day · Pro removes the limit · Android 11+</p>
+  </div>
+  <div class="phone">
+    <img src="https://play-lh.googleusercontent.com/B8KB32SS6dT5nuSV0Ognyh-LCYE1aJDR_yyAVvF-F62pKN0hTFKPR7G-LiBSRd8gwfTePPWx1HFnAnvREOI7=w400" alt="Point Translate showing a translation bubble over on-screen text">
+  </div>
+</div>
 
-<h2>How it works</h2>
-<ul>
-  <li>The pen's hover position comes from Android's accessibility motion-event stream.</li>
-  <li>The word under the pen is read from the on-screen accessibility node, or recognised
-      from a screenshot when the app underneath exposes no text.</li>
-  <li>Translation runs on-device with Google ML Kit. Language models are downloaded once
-      and used offline afterwards.</li>
-</ul>
+<h2 id="how">Two ways to point</h2>
+<div class="grid">
+  <div class="card">
+    <h3>With a finger</h3>
+    <p>A small sight sits on top of the screen. Drag it over the text you want and let go. Works on any phone or tablet — no stylus needed.</p>
+  </div>
+  <div class="card">
+    <h3>With a stylus</h3>
+    <p>Hover the tip just above the text and hold still for a moment. Nothing to tap at all. Supported on devices with pen hover, such as Samsung Galaxy models with an S Pen.</p>
+  </div>
+  <div class="card">
+    <h3>From anywhere</h3>
+    <p>Bring the sight up from a Quick Settings tile or the Android accessibility shortcut, then point.</p>
+  </div>
+</div>
 
-<h2>Links</h2>
-<ul>
-  <li><a href="privacy.html">Privacy policy</a></li>
-  <li><a href="mailto:hellodelorus@gmail.com">Support</a></li>
-</ul>
-</body></html>
+<h2>Works everywhere you can see text</h2>
+<p>Browsers, chat apps, PDF readers, e-books, email, social feeds, games, menus,
+settings screens. If you can see the text, you can translate it. Point Translate
+first asks the app for the text directly (fast and exact); when an app doesn't
+expose its text, it falls back to on-device character recognition so you still
+get a result.</p>
+
+<h2>Private by design</h2>
+<p>Translation runs entirely on your device using on-device machine learning.
+Nothing you point at is uploaded, stored, or shared. The app collects <strong>no
+personal data at all</strong> — no account, no analytics, no advertising. Language
+packs download once and then work completely offline, with no connection.</p>
+
+<h2>60+ languages, both directions</h2>
+<p>Pick any source and target language, or let the app detect the source
+automatically. Translate into the language you read, from the language on the
+screen — in either direction.</p>
+
+<h2>Free and Pro</h2>
+<p>The free version gives you 10 translations every day, with the full feature set.
+Pro removes the daily limit with a monthly plan, a yearly plan, or a one-time
+lifetime purchase.</p>
+<p>
+  <a class="cta" href="https://play.google.com/store/apps/details?id=com.hellodelorus.pentranslate">Get Point Translate on Google Play</a>
+</p>
+
+<h2>Screenshots</h2>
+<div class="shots">
+  <div class="shot"><img loading="lazy" src="https://play-lh.googleusercontent.com/B8KB32SS6dT5nuSV0Ognyh-LCYE1aJDR_yyAVvF-F62pKN0hTFKPR7G-LiBSRd8gwfTePPWx1HFnAnvREOI7=w300" alt="Point Translate translation bubble"></div>
+  <div class="shot"><img loading="lazy" src="https://play-lh.googleusercontent.com/OBVqgRK7eerY0GPfK8AOzitu5oE9ecC6kG4kURTCb1K41gpqVsN0WjmJwJh-wX8vILzpcc1kYHt56aLN2g=w300" alt="Point Translate in a browser"></div>
+  <div class="shot"><img loading="lazy" src="https://play-lh.googleusercontent.com/tZWt43vxgerEPJ3Mjk5TRJFC9EkGIHD_9dawD-edEWnaJXjjE5FC6OdX9oayy6RaShw_PYCiR3H-vvyvbrTZ=w300" alt="Point Translate in a chat app"></div>
+  <div class="shot"><img loading="lazy" src="https://play-lh.googleusercontent.com/NZbKZfoZD_KkStQ4XNJkbkhw5DyLxbK7XUcKc4ESjl7sqvwDOXekUsiS-rnp35Y_43cN6q80zG5w0sRKaOgh=w300" alt="Point Translate in a PDF"></div>
+  <div class="shot"><img loading="lazy" src="https://play-lh.googleusercontent.com/WjpF3nvNooIkrl_AXkcay6Ieg1B8NM4wQ8xpnD70P_PyyrFcuZn-2kyHJU_L1Zyo0mIvI2AXBcTy8bkpCB5iVg=w300" alt="Point Translate language picker"></div>
+  <div class="shot"><img loading="lazy" src="https://play-lh.googleusercontent.com/DiLSiowdsIV14g7_9XhxJ1zv--YDl1W_L98V3VQ4zoDHMsoBuIpd74a5HWytyCC6TZxAFL74YJUxFQNcpNwFEgU=w300" alt="Point Translate settings"></div>
+</div>
+
+<footer>
+  <p><strong>Point Translate: Tap or Pen</strong> · <a href="https://play.google.com/store/apps/details?id=com.hellodelorus.pentranslate">Google Play</a> · <a href="privacy.html">Privacy policy</a> · <a href="mailto:hellodelorus@gmail.com">Support</a></p>
+  <p>Any phone or tablet running Android 11 or newer. A stylus is optional.</p>
+</footer>
+
+</body>
+</html>
