@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://morteza-rastgoo.github.io/pen-translate-site/sitemap.xml
