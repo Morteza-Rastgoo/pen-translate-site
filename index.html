@@ -60,6 +60,66 @@
 }
 </script>
 
+<!-- FAQPage: AI Overviews and Google's answer box pull directly from this.
+     Answers are written to be quotable verbatim and to disambiguate the app
+     from camera-translate apps (pointtranslate.com is a camera PWA). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Point Translate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Point Translate is a free Android app that translates text already on your screen. You point at a word, sentence, or paragraph with your finger or an S Pen and the translation appears in a floating bubble right where you are looking. It is not a camera translator: it reads the text that is already displayed, in any app, without a screenshot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Point Translate different from Google Translate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google Translate is best for pointing your camera at a sign or document. Point Translate is for text that is already on your phone's screen — in a browser, chat, PDF, game, or settings page. Instead of switching apps, copying, or taking a photo, you point at the text and read the translation in place."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Point Translate work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Translation runs entirely on your device using on-device machine learning. Language packs download once and then work completely offline, with no connection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Point Translate free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The free version includes the full feature set with 10 translations per day. Pro removes the daily limit with a monthly plan, a yearly plan, or a one-time lifetime purchase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Point Translate collect my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Nothing you point at is uploaded, stored, or shared. The app collects no personal data at all — no account, no analytics, no advertising."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Point Translate work with an S Pen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. On devices with pen hover, such as Samsung Galaxy phones and tablets with an S Pen, you can hover the tip just above the text and hold still to translate, with nothing to tap. On any other phone or tablet you use the finger lens instead."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
  :root{color-scheme:light dark;--accent:#4F46E5;--accent2:#6D5BF0}
  *{box-sizing:border-box}
@@ -90,6 +150,10 @@
  footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e6e6f0;opacity:.7;font-size:.9rem}
  ul{padding-left:1.2rem} li{margin:.3rem 0}
  .kicker{color:var(--accent2);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:.8rem}
+ details{border:1px solid #e6e6f0;border-radius:12px;padding:.7rem 1rem;margin:.6rem 0;background:transparent}
+ @media (prefers-color-scheme:dark){details{border-color:#26263a}}
+ summary{cursor:pointer;font-weight:600;color:var(--accent2)}
+ details p{margin:.6rem 0 0;opacity:.85}
 </style>
 </head>
 <body>
@@ -162,6 +226,55 @@ lifetime purchase.</p>
   <div class="shot"><img loading="lazy" src="https://play-lh.googleusercontent.com/WjpF3nvNooIkrl_AXkcay6Ieg1B8NM4wQ8xpnD70P_PyyrFcuZn-2kyHJU_L1Zyo0mIvI2AXBcTy8bkpCB5iVg=w300" alt="Point Translate language picker"></div>
   <div class="shot"><img loading="lazy" src="https://play-lh.googleusercontent.com/DiLSiowdsIV14g7_9XhxJ1zv--YDl1W_L98V3VQ4zoDHMsoBuIpd74a5HWytyCC6TZxAFL74YJUxFQNcpNwFEgU=w300" alt="Point Translate settings"></div>
 </div>
+
+<h2>Point at the screen, not the camera</h2>
+<p>Most "translate" apps want you to point your <em>camera</em> at a sign or a
+page. Point Translate is for the text that is <strong>already on your
+screen</strong> — the browser tab, the chat, the PDF, the game, the settings
+menu you are looking at right now. You do not leave the app, copy anything, or
+take a screenshot. You point, and the translation appears where you are
+looking.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+<details>
+  <summary>What is Point Translate?</summary>
+  <p>A free Android app that translates text already on your screen. Point at a
+  word, sentence, or paragraph with your finger or an S Pen and the translation
+  appears in a floating bubble right where you are looking. It is not a camera
+  translator — it reads the text that is already displayed, in any app, without
+  a screenshot.</p>
+</details>
+<details>
+  <summary>How is it different from Google Translate?</summary>
+  <p>Google Translate is best for pointing your camera at a sign or document.
+  Point Translate is for text already on your phone's screen — in a browser,
+  chat, PDF, game, or settings page. Instead of switching apps, copying, or
+  taking a photo, you point at the text and read the translation in place.</p>
+</details>
+<details>
+  <summary>Does it work offline?</summary>
+  <p>Yes. Translation runs entirely on your device using on-device machine
+  learning. Language packs download once and then work completely offline, with
+  no connection.</p>
+</details>
+<details>
+  <summary>Is it free?</summary>
+  <p>The free version includes the full feature set with 10 translations per
+  day. Pro removes the daily limit with a monthly plan, a yearly plan, or a
+  one-time lifetime purchase.</p>
+</details>
+<details>
+  <summary>Does it collect my data?</summary>
+  <p>No. Nothing you point at is uploaded, stored, or shared. The app collects
+  no personal data at all — no account, no analytics, no advertising.</p>
+</details>
+<details>
+  <summary>Does it work with an S Pen?</summary>
+  <p>Yes. On devices with pen hover, such as Samsung Galaxy phones and tablets
+  with an S Pen, hover the tip just above the text and hold still to translate,
+  with nothing to tap. On any other phone or tablet you use the finger lens
+  instead.</p>
+</details>
 
 <footer>
   <p><strong>Point Translate: Tap or Pen</strong> · <a href="https://play.google.com/store/apps/details?id=com.hellodelorus.pentranslate">Google Play</a> · <a href="https://github.com/Morteza-Rastgoo/pen-translate">Source on GitHub</a> · <a href="privacy.html">Privacy policy</a> · <a href="mailto:hellodelorus@gmail.com">Support</a></p>
